@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Xcelore Doctor Patient Backend",
+    "_postman_id": "xcelore-doctor-patient-collection",
+    "description": "Postman collection for testing the Doctor-Patient Suggestion APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Doctor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Dr. Sharma\",\n    \"city\": \"Delhi\",\n    \"email\": \"dr.sharma@example.com\",\n    \"phoneNumber\": \"9876543210\",\n    \"speciality\": \"ORTHOPAEDIC\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "doctors"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Patient",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Amit Verma\",\n    \"city\": \"Delhi\",\n    \"email\": \"amit.verma@example.com\",\n    \"phoneNumber\": \"9988776655\",\n    \"symptom\": \"Arthritis\"\n}",
+          
+
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Suggest Doctors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/suggestions/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "suggestions",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
